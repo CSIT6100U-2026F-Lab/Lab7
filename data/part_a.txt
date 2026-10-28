@@ -1,0 +1,8 @@
+alpha0 alpha0 alpha0 alpha0 alpha0 alpha1 alpha1 alpha1 alpha1 alpha1
+alpha2 alpha2 alpha2 alpha2 alpha2 alpha3 alpha3 alpha3 alpha3 alpha3
+alpha4 alpha4 alpha4 alpha4 alpha4 alpha5 alpha5 alpha5 alpha5 alpha5
+alpha6 alpha6 alpha6 alpha6 alpha6 alpha7 alpha7 alpha7 alpha7 alpha7
+alpha8 alpha8 alpha8 alpha8 alpha8 alpha9 alpha9 alpha9 alpha9 alpha9
+alpha10 alpha10 alpha10 alpha10 alpha10 alpha11 alpha11 alpha11 alpha11 alpha11
+alpha12 alpha12 alpha12 alpha12 alpha12 alpha13 alpha13 alpha13 alpha13 alpha13
+alpha14 alpha14 alpha14 alpha14 alpha14 spark spark spark spark

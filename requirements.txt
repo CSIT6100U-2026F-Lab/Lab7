@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+python-multipart
+pyspark>=3.5.0,<5

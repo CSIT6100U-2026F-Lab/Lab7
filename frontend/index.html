@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 — Online Code Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="toolbar">
+        <h1 class="toolbar-title">📁 Lab 7 — Online Code Explorer</h1>
+        <div class="toolbar-actions">
+            <span id="status-message" class="status-message" role="status"></span>
+            <label class="k-label" for="topk-k">k</label>
+            <input
+                id="topk-k"
+                class="k-input"
+                type="number"
+                min="1"
+                max="100"
+                value="10"
+                aria-label="Top-k"
+            >
+            <button id="topk-btn" class="toolbar-btn" type="button">Top-K</button>
+            <button id="refresh-btn" class="toolbar-btn" type="button">Refresh</button>
+            <button id="save-btn" class="toolbar-btn" type="button">Save</button>
+            <button id="delete-btn" class="toolbar-btn toolbar-btn-danger" type="button">Delete</button>
+        </div>
+    </header>
+
+    <div class="workspace">
+        <aside class="sidebar">
+            <h2 class="sidebar-heading">Files</h2>
+            <form id="create-form" class="create-form">
+                <input
+                    id="new-filename"
+                    class="create-input"
+                    type="text"
+                    placeholder="new_file.py"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button id="new-btn" class="toolbar-btn create-btn" type="submit">New</button>
+            </form>
+            <ul id="file-list" class="file-list"></ul>
+        </aside>
+
+        <section class="editor-pane">
+            <div id="editor-label" class="editor-label"></div>
+            <div id="editor" class="editor"></div>
+            <div id="editor-fallback" class="editor-fallback" hidden></div>
+        </section>
+    </div>
+
+    <div id="discard-overlay" class="modal-overlay" hidden>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="discard-title">
+            <h3 id="discard-title" class="modal-title">Unsaved changes</h3>
+            <p class="modal-body">The following files have not been saved:</p>
+            <ul id="discard-file-list" class="modal-file-list"></ul>
+            <p class="modal-body">Discard these drafts and refresh?</p>
+            <div class="modal-actions">
+                <button id="discard-cancel" class="toolbar-btn" type="button">Cancel</button>
+                <button id="discard-confirm" class="toolbar-btn toolbar-btn-danger" type="button">Discard and refresh</button>
+            </div>
+        </div>
+    </div>
+
+    <aside id="topk-panel" class="search-panel" hidden>
+        <div class="search-panel-header">
+            <h3 id="topk-title" class="search-panel-title">Top-K words</h3>
+            <button id="topk-close" class="toolbar-btn search-panel-close" type="button">Close</button>
+        </div>
+        <p id="topk-empty" class="search-panel-empty" hidden>No words</p>
+        <ul id="topk-list" class="search-hit-list"></ul>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+</html>
